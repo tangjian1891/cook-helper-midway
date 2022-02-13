@@ -1,4 +1,4 @@
-# cook-helper
+# cook-helper-midway
 
 ## QuickStart
 
