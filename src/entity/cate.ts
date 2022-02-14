@@ -5,10 +5,13 @@ import { Column, PrimaryGeneratedColumn } from 'typeorm';
 export class Cate {
   @PrimaryGeneratedColumn()
   id: number;
+
   @Column({length:20})
-  name: string;
+  cateName: string;
+
   @Column()
   desction: string;
+
   @Column()
   avatar: string;
 }
