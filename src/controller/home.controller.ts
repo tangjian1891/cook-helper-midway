@@ -1,6 +1,6 @@
 import { Controller, Get } from '@midwayjs/decorator';
 
-@Controller('/')
+@Controller('/qwer')
 export class HomeController {
   @Get('/')
   async home(): Promise<string> {
