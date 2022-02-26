@@ -2,6 +2,7 @@ import { Inject, Controller, Get, Query } from '@midwayjs/decorator';
 import { Context } from '@midwayjs/koa';
 import { UserService } from '../service/user.service';
 import { HttpService } from '@midwayjs/axios';
+import * as  fs from "fs/promises"
 @Controller('/')
 export class APIController {
   @Inject()
@@ -18,7 +19,9 @@ export class APIController {
     console.log('接口来了', query);
     // console.log(query.);
     // const user = await this.userService.getUser({ uid });
-    return query.echostr;
+    let res= await fs.readFile("./src/view/index.html")
+    console.log(res);
+    return res.toString();
   }
   @Get('/access_token')
   async getAccessToken() {
